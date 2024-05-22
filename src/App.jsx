@@ -3,6 +3,7 @@ import Overview from "./components/Overview";
 import { MainContext } from "./context/Context";
 import "./globals.css";
 import ActivityMetrics from "./components/ActivityMetrics";
+import TeamPerformance from "./components/TeamPerformance";
 
 function App() {
   const { loader } = React.useContext(MainContext);
@@ -12,6 +13,7 @@ function App() {
     <div className="min-h-screen">
       <Overview />
       <div>
+        <TeamPerformance />
         <ActivityMetrics />
       </div>
     </div>
