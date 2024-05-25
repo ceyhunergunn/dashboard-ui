@@ -18,67 +18,41 @@
 
 @layer utilities {
   /* TYPOGRAPHY */
-  .h1-bold {
-    @apply text-[30px] font-bold leading-[140%] text-primary-1 tracking-tighter;
+  .t-30b {
+    @apply text-[30px] font-bold leading-[140%] tracking-tighter;
   }
 
-  .h1-semibold {
-    @apply text-[30px] font-semibold leading-[140%]  text-primary-1 tracking-tighter;
+  .t-30sb {
+    @apply text-[30px] font-semibold leading-[140%]  tracking-tighter;
   }
 
-  .h2-bold {
-    @apply text-[25px] font-bold leading-[140%]  text-primary-1 tracking-tighter;
+  .t-25b {
+    @apply text-[25px] font-bold leading-[140%] tracking-tighter;
   }
 
-  .h2-medium {
-    @apply text-[25px] font-medium leading-[140%]  text-primary-1 tracking-tighter;
+  .t-25m {
+    @apply text-[25px] font-medium leading-[140%] tracking-tighter;
   }
 
-  .h3-bold {
-    @apply text-[20px] font-bold leading-[140%]  text-primary-1 tracking-tighter;
+  .t-20b {
+    @apply text-[20px] font-bold leading-[140%] tracking-tighter;
   }
-  .h3-light {
-    @apply text-[20px] font-light leading-[140%]  text-primary-1 tracking-tighter;
-  }
-
-  .base-semibold {
-    @apply text-[16px] font-semibold leading-[140%]  text-primary-1 tracking-tighter;
+  .t-20m {
+    @apply text-[20px] font-medium leading-[140%] tracking-tighter;
   }
 
-  .base-medium {
-    @apply text-[16px] font-medium leading-[140%]  text-primary-1;
+  .t-15b {
+    @apply text-[15px] font-bold leading-[140%] tracking-tighter;
+  }
+  .t-15m {
+    @apply text-[15px] font-medium leading-[140%] tracking-tighter;
   }
 
-  .base-regular {
-    @apply text-[16px] font-normal leading-[140%]  text-primary-1;
+  .t-10b {
+    @apply text-[10px] font-bold leading-[140%] tracking-tighter;
   }
-
-  .body-bold {
-    @apply text-[18px] font-bold leading-[140%]  text-primary-1;
-  }
-
-  .body-medium {
-    @apply text-[18px] font-medium leading-[140%]  text-primary-1;
-  }
-
-  .small-semibold {
-    @apply text-[14px] font-semibold leading-[140%]  text-primary-1 tracking-tighter;
-  }
-
-  .small-medium {
-    @apply text-[14px] font-medium leading-[140%]  text-primary-1;
-  }
-
-  .small-regular {
-    @apply text-[14px] font-normal leading-[140%]  text-primary-1;
-  }
-
-  .subtle-semibold {
-    @apply text-[12px] font-semibold leading-[140%]  text-primary-1;
-  }
-
-  .tiny-medium {
-    @apply text-[10px] font-medium leading-[140%]  text-primary-1;
+  .t-10m {
+    @apply text-[10px] font-medium leading-[140%] tracking-tighter;
   }
 
   /* UTILITIES */

@@ -142,7 +142,7 @@ const ActivityMetrics = () => {
   return (
     <div className="common-container p-3">
       <div className="activity-metrics-card">
-        <h2 className="h2-medium flex-start gap-2">Activity Metrics</h2>
+        <h2 className="t-25b flex-start gap-2">Activity Metrics</h2>
         <ReactApexChart
           options={options}
           series={series}
