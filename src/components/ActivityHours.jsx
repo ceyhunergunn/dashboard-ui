@@ -2,7 +2,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { MainContext } from "../context/Context";
 
-const ActivityMetrics = () => {
+const ActivityHours = () => {
   const { data } = React.useContext(MainContext);
 
   const formattedData = data?.activity_hours?.map((item) => {
@@ -154,4 +154,4 @@ const ActivityMetrics = () => {
   );
 };
 
-export default ActivityMetrics;
+export default ActivityHours;
