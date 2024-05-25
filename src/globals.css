@@ -130,7 +130,7 @@
     background: rgba(24, 46, 55, 0.4);
   }
 
-  .activity-metrics-grid {
+  .main-grid {
     @apply w-full grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3;
   }
   .activity-metrics-card {

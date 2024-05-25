@@ -140,19 +140,15 @@ const ActivityMetrics = () => {
   };
 
   return (
-    <div className="common-container">
-      <div className="activity-metrics-grid">
-        <div className="col-span-2 p-3">
-          <div className="activity-metrics-card">
-            <h2 className="h2-medium flex-start gap-2">Activity Metrics</h2>
-            <ReactApexChart
-              options={options}
-              series={series}
-              type="line"
-              height={350}
-            />
-          </div>
-        </div>
+    <div className="common-container p-3">
+      <div className="activity-metrics-card">
+        <h2 className="h2-medium flex-start gap-2">Activity Metrics</h2>
+        <ReactApexChart
+          options={options}
+          series={series}
+          type="line"
+          height={350}
+        />
       </div>
     </div>
   );

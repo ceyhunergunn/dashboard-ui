@@ -4,6 +4,7 @@ import { MainContext } from "./context/Context";
 import "./globals.css";
 import ActivityMetrics from "./components/ActivityMetrics";
 import TeamPerformance from "./components/TeamPerformance";
+import IndividualPerformance from "./components/IndividualPerformance";
 
 function App() {
   const { loader } = React.useContext(MainContext);
@@ -12,9 +13,12 @@ function App() {
   ) : (
     <div className="min-h-screen">
       <Overview />
-      <div>
-        <TeamPerformance />
-        <ActivityMetrics />
+      <div className="main-grid">
+        <div className="col-span-2">
+          <TeamPerformance />
+          <ActivityMetrics />
+        </div>
+        <IndividualPerformance />
       </div>
     </div>
   );
