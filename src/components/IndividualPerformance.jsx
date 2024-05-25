@@ -1,6 +1,5 @@
 import React from "react";
 import { MainContext } from "../context/Context";
-import DataTable from "react-data-table-component";
 
 const IndividualPerformance = () => {
   const { data } = React.useContext(MainContext);
@@ -12,9 +11,12 @@ const IndividualPerformance = () => {
         <div className="t-20m mb-3">Top Employees</div>
         <div>
           {data.top_employees.map((employee) => (
-            <div className="mb-2">
-              {employee.name}
-              <div className="text-secondary-2 t-15m">{employee.email}</div>
+            <div className="mb-3">
+              <div className="flex-between">
+                <div className="t-15m">{employee.name}</div>
+                <div className="t-15m">{employee.current_score}</div>
+              </div>
+              <div className="text-secondary-2 t-15m">{employee.title}</div>
             </div>
           ))}
         </div>
