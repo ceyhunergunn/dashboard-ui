@@ -63,6 +63,9 @@ const ActivityMetrics = () => {
           "</strong>"
         );
       },
+      labels: {
+        colors: "#fff",
+      },
     },
     markers: {
       size: 0,
@@ -74,7 +77,7 @@ const ActivityMetrics = () => {
       categories: dates,
       labels: {
         style: {
-          colors: "#343434",
+          colors: "#fff",
           fontSize: "12px",
           fontFamily: "Arial, sans-serif",
           fontWeight: 400,
@@ -85,7 +88,7 @@ const ActivityMetrics = () => {
       min: 0,
       labels: {
         style: {
-          colors: "#343434",
+          colors: "#fff",
           fontSize: "12px",
           fontFamily: "Arial, sans-serif",
           fontWeight: 400,
@@ -132,7 +135,7 @@ const ActivityMetrics = () => {
       ],
     },
     grid: {
-      borderColor: "#343434",
+      borderColor: "#fff",
     },
   };
 

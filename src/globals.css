@@ -4,10 +4,15 @@
 
 @layer base {
   body {
-    @apply bg-primary-2 text-white min-h-screen;
+    @apply text-white min-h-screen;
+    background-image: url("./assets/main-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
   }
   body > div {
     @apply min-h-screen;
+    background: rgba(24, 46, 55, 0.5);
   }
 }
 
@@ -121,13 +126,32 @@
   }
 
   .overview-card {
-    @apply w-full bg-primary-3 grid grid-cols-2 rounded-[12px] p-5 h-[120px] min-h-[80px] border drop-shadow border-primary-2;
+    @apply w-full grid grid-cols-2 rounded-[12px] p-5 h-[120px] min-h-[80px];
+    background: rgba(24, 46, 55, 0.4);
   }
 
   .activity-metrics-grid {
     @apply w-full grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3;
   }
   .activity-metrics-card {
-    @apply w-full bg-primary-3 rounded-[12px] p-5 border drop-shadow border-primary-2;
+    @apply w-full rounded-[12px] p-5;
+    background: rgba(24, 46, 55, 0.4);
+  }
+
+  .team-details-grid {
+    @apply w-full grid grid-cols-1;
+  }
+  /* TABLE */
+  .transparent-table .rdt_Table,
+  .transparent-table .rdt_TableHead,
+  .transparent-table .rdt_TableHeadRow,
+  .transparent-table .rdt_TableCol,
+  .transparent-table .rdt_TableRow,
+  .transparent-table .rdt_TableCell,
+  .transparent-table .rdt_TableBody,
+  .gvfhKe,
+  .bNvKBt,
+  .eqliEg:hover {
+    background-color: transparent !important;
   }
 }
