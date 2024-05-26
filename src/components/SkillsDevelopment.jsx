@@ -28,9 +28,9 @@ const SkillsDevelopment = () => {
     },
   ];
   return (
-    <div className="common-container p-3">
+    <div className="common-container p-3 col-span-1 md:col-span-2">
       <div className="main-card">
-        <h2 className="t-25b flex-start gap-2">Skills In Development</h2>
+        <h2 className="t-25b flex-start mb-5">Skills In Development</h2>
         <div className="transparent-table">
           <DataTable
             columns={columns}

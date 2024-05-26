@@ -10,6 +10,8 @@ import ActivityHours from "./components/ActivityHours";
 import SkillsDevelopment from "./components/SkillsDevelopment";
 import Loader from "./components/Loader";
 import Performance from "./components/Performance";
+import TopEmployees from "./components/TopEmployees";
+import TopSkills from "./components/TopSkills";
 
 function App() {
   const { loader } = React.useContext(MainContext);
@@ -24,7 +26,9 @@ function App() {
         <ActivityHours />
       </div>
       <div className="main-grid-1">
-        <Performance />
+        {/* <Performance /> */}
+        <TopEmployees />
+        <TopSkills />
         <SkillsDevelopment />
       </div>
       <div className="">

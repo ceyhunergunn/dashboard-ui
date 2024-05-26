@@ -56,12 +56,11 @@ const ActivityHours = () => {
     },
     legend: {
       tooltipHoverFormatter: function (val, opts) {
-        return (
-          val +
-          " - <strong>" +
-          opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
-          "</strong>"
-        );
+        return val;
+        // +
+        // " - <strong>" +
+        // opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] +
+        // "</strong>"
       },
       labels: {
         colors: "#fff",
@@ -143,12 +142,14 @@ const ActivityHours = () => {
     <div className="common-container p-3">
       <div className="main-card">
         <h2 className="t-25b flex-start mb-5">Activity Metrics</h2>
-        <ReactApexChart
-          options={options}
-          series={series}
-          type="line"
-          height={350}
-        />
+        <div className="mx-auto">
+          <ReactApexChart
+            options={options}
+            series={series}
+            type="line"
+            height={350}
+          />
+        </div>
       </div>
     </div>
   );

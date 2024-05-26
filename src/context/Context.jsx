@@ -37,7 +37,9 @@ const MainContextProvider = (props) => {
       .then((json) => {
         setData(json.data);
         if (json) {
-          setLoader(false);
+          setTimeout(() => {
+            setLoader(false);
+          }, 2000);
         }
       });
   };

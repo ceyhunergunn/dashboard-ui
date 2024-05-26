@@ -3,12 +3,12 @@ import { MainContext } from "../context/Context";
 import DataTable from "react-data-table-component";
 
 const Teams = () => {
-  const { data, isSmallScreen } = React.useContext(MainContext);
+  const { data, isMediumScreen } = React.useContext(MainContext);
   const columns = [
     {
       name: "Title",
       selector: (row) => row.title,
-      maxWidth: "auto",
+      width: isMediumScreen ? "50%" : "33%",
       wrap: true,
       sortable: "true",
       style: {
@@ -18,7 +18,7 @@ const Teams = () => {
     {
       name: "Employee Count",
       selector: (row) => +row.total_employee_count,
-      width: "auto",
+      width: isMediumScreen ? "50%" : "33%",
       wrap: true,
       sortable: "true",
       center: "center",
@@ -29,10 +29,10 @@ const Teams = () => {
     {
       name: "Overall Score",
       selector: (row) => row.overall_score,
-      width: "auto",
+      width: isMediumScreen ? "50%" : "33%",
       sortable: "true",
       wrap: true,
-      hide: "sm",
+      hide: "md",
       center: "center",
       style: {
         fontSize: "15px",
@@ -69,7 +69,7 @@ const Teams = () => {
                     </div>
                   </div>
                 </div>
-                {isSmallScreen ? (
+                {isMediumScreen ? (
                   <div className="p-3">
                     <div className="team-details-grid">
                       <div className="flex-start mb-2 t-15b">Overal Score</div>
