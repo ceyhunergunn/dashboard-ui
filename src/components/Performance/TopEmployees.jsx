@@ -1,13 +1,12 @@
 import React from "react";
-import { MainContext } from "../context/Context";
+import { MainContext } from "../../context/Context";
 
 const TopEmployees = () => {
   const { data } = React.useContext(MainContext);
 
   return (
     <div className="common-container p-3">
-      <h2 className="t-25b flex-start mb-3">Performance</h2>
-      <div className="activity-metrics-card">
+      <div className="main-card">
         <div className="t-20m mb-3">Top Employees</div>
         {data.top_employees.map((employee) => (
           <div className="mb-3">

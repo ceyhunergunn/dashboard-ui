@@ -41,8 +41,8 @@ const Teams = () => {
   ];
   return (
     <div className="common-container p-3">
-      <div className="activity-metrics-card">
-        <h2 className="t-25b flex-start gap-2">Teams</h2>
+      <div className="main-card">
+        <h2 className="t-25b flex-start mb-5">Teams</h2>
         <div className="transparent-table">
           <DataTable
             columns={columns}

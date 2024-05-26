@@ -1,12 +1,12 @@
 import React from "react";
-import { MainContext } from "../context/Context";
+import { MainContext } from "../../context/Context";
 
 const TopSkills = () => {
   const { data } = React.useContext(MainContext);
 
   return (
     <div className="common-container p-3">
-      <div className="activity-metrics-card">
+      <div className="main-card">
         <div className="t-20m mb-3">Top Skills</div>
         {data.top_skills.map((skill) => (
           <div className="mb-3">

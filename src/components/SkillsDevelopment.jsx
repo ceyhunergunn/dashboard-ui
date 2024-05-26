@@ -29,7 +29,7 @@ const SkillsDevelopment = () => {
   ];
   return (
     <div className="common-container p-3">
-      <div className="activity-metrics-card">
+      <div className="main-card">
         <h2 className="t-25b flex-start gap-2">Skills In Development</h2>
         <div className="transparent-table">
           <DataTable
