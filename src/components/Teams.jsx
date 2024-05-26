@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MainContext } from "../context/Context";
 import DataTable from "react-data-table-component";
 
 const Teams = () => {
   const { data } = React.useContext(MainContext);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 599);
+  console.log(isSmallScreen);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 599);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const columns = [
     {
       name: "Title",

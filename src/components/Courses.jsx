@@ -4,6 +4,7 @@ import DataTable from "react-data-table-component";
 
 const Courses = () => {
   const { data } = React.useContext(MainContext);
+  const courses = data.in_progress_courses.concat(data.upcoming_courses);
   const columns = [
     {
       name: "Title",
@@ -15,8 +16,8 @@ const Courses = () => {
       },
     },
     {
-      name: "Employee Count",
-      selector: (row) => row.due_date,
+      name: "Assigned Employee",
+      selector: (row) => row.assigned_to,
       width: "auto",
       wrap: true,
       center: "center",
@@ -25,8 +26,8 @@ const Courses = () => {
       },
     },
     {
-      name: "Overall Score",
-      selector: (row) => row.assigned_to,
+      name: "Due Date",
+      selector: (row) => row.due_date,
       width: "auto",
       wrap: true,
       center: "center",
@@ -42,7 +43,7 @@ const Courses = () => {
         <div className="transparent-table">
           <DataTable
             columns={columns}
-            data={data.in_progress_courses}
+            data={courses}
             defaultSortField="name"
             pagination
             paginationPerPage={5}
