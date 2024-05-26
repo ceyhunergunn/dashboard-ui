@@ -9,6 +9,7 @@ const SkillsDevelopment = () => {
       name: "Skill",
       selector: (row) => row.skill,
       maxWidth: "auto",
+      sortable: true,
       wrap: true,
       style: {
         fontSize: "15px",
@@ -16,8 +17,9 @@ const SkillsDevelopment = () => {
     },
     {
       name: "Employee Count",
-      selector: (row) => row.employees,
+      selector: (row) => +row.employees,
       width: "auto",
+      sortable: true,
       wrap: true,
       right: "right",
       style: {
@@ -33,7 +35,6 @@ const SkillsDevelopment = () => {
           <DataTable
             columns={columns}
             data={data.skills_in_development}
-            defaultSortField="name"
             pagination
             paginationPerPage={5}
             paginationRowsPerPageOptions={[5, 10, 20, 30, 40, 50]}

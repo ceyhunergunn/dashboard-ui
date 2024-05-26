@@ -6,6 +6,10 @@ export const MainContext = createContext();
 const MainContextProvider = (props) => {
   const [data, setData] = useState("");
   const [loader, setLoader] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 599);
+  const [isMediumScreen, setIsMediumScreen] = useState(
+    window.innerWidth <= 959
+  );
 
   createTheme(
     "solarized",
@@ -43,8 +47,21 @@ const MainContextProvider = (props) => {
     // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 599);
+      setIsMediumScreen(window.innerWidth <= 959);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <MainContext.Provider value={{ data, loader }}>
+    <MainContext.Provider
+      value={{ data, loader, isSmallScreen, isMediumScreen }}
+    >
       {props.children}
     </MainContext.Provider>
   );
