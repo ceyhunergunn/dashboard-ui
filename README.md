@@ -14,4 +14,4 @@ runs the project
 
 Github Repository URL: https://github.com/ceyhunergunn/dashboard-ui
 
-Live Demo: https://movie-ui.hicci.com.tr/
+Live Demo: https://dashboard-ui.hicci.com.tr/
