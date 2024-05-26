@@ -1,35 +1,73 @@
 import React from "react";
 import { MainContext } from "../context/Context";
+import DataTable from "react-data-table-component";
 
 const Courses = () => {
   const { data } = React.useContext(MainContext);
-
+  const columns = [
+    {
+      name: "Title",
+      selector: (row) => row.title,
+      maxWidth: "auto",
+      wrap: true,
+      style: {
+        fontSize: "15px",
+      },
+    },
+    {
+      name: "Employee Count",
+      selector: (row) => row.due_date,
+      width: "auto",
+      wrap: true,
+      center: "center",
+      style: {
+        fontSize: "15px",
+      },
+    },
+    {
+      name: "Overall Score",
+      selector: (row) => row.assigned_to,
+      width: "auto",
+      wrap: true,
+      center: "center",
+      style: {
+        fontSize: "15px",
+      },
+    },
+  ];
   return (
     <div className="common-container p-3">
-      <h2 className="t-25b flex-start mb-3">Courses</h2>
       <div className="activity-metrics-card">
-        <div className="t-20m mb-3">In Progress Courses</div>
-        <div className="mb-5">
-          {data.in_progress_courses.map((course) => (
-            <div className="mb-3">
-              <div className="flex-between">
-                <div className="t-15m">{course.title}</div>
-              </div>
-              <div className="text-secondary-2 t-15m">{course.description}</div>
-            </div>
-          ))}
-        </div>
-        <div className="t-20m mb-3">Upcoming Courses</div>
-        <div className="mb-3">
-          {data.top_employees.map((employee) => (
-            <div className="mb-3">
-              <div className="flex-between">
-                <div className="t-15m">{employee.name}</div>
-                <div className="t-15m">{employee.current_score}</div>
-              </div>
-              <div className="text-secondary-2 t-15m">{employee.title}</div>
-            </div>
-          ))}
+        <h2 className="t-25b flex-start gap-2">Courses</h2>
+        <div className="transparent-table">
+          <DataTable
+            columns={columns}
+            data={data.in_progress_courses}
+            defaultSortField="name"
+            pagination
+            paginationPerPage={5}
+            paginationRowsPerPageOptions={[5, 10, 20, 30, 40, 50]}
+            highlightOnHover
+            pointerOnHover
+            theme="solarized"
+            expandableRows={true}
+            expandableRowsComponent={(row) => (
+              <>
+                <div className="p-3">
+                  <div className="team-details-grid">
+                    <div className="flex-start mb-2 t-15b">Description</div>
+                    <div className="flex-start text-secondary-2 t-15m">
+                      {row.data.description}
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
+            paginationComponentOptions={{
+              rowsPerPageText: "rows",
+              rangeSeparatorText: "/",
+            }}
+          />
         </div>
       </div>
     </div>

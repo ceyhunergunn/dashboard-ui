@@ -3,7 +3,7 @@ import { MainContext } from "../context/Context";
 
 const Overview = () => {
   const { data } = React.useContext(MainContext);
-  console.log(data);
+
   return (
     <div className="common-container">
       <div className="overview-grid">
@@ -13,7 +13,7 @@ const Overview = () => {
               <i className="fa-solid fa-circle-check"></i>
               Total Completed Courses
             </h2>
-            <p className="t-25m flex-end">{data.total_completed_courses}</p>
+            <p className="t-30m flex-end">{data.total_completed_courses}</p>
           </div>
         </div>
         <div className="p-3">
@@ -22,7 +22,7 @@ const Overview = () => {
               <i className="fa-solid fa-user-tie"></i>
               Total Employees
             </h2>
-            <p className="t-25m flex-end">{data.total_employees}</p>
+            <p className="t-30m flex-end">{data.total_employees}</p>
           </div>
         </div>
         <div className="p-3">
@@ -31,7 +31,7 @@ const Overview = () => {
               <i className="fa-solid fa-star"></i>
               Average Employee Score
             </h2>
-            <p className="t-25m flex-end">{data.average_employee_score}</p>
+            <p className="t-30m flex-end">{data.average_employee_score}</p>
           </div>
         </div>
       </div>

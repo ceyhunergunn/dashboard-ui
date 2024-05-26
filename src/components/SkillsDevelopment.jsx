@@ -1,7 +1,50 @@
 import React from "react";
+import { MainContext } from "../context/Context";
+import DataTable from "react-data-table-component";
 
 const SkillsDevelopment = () => {
-  return <div>SkillsDevelopment</div>;
+  const { data } = React.useContext(MainContext);
+  const columns = [
+    {
+      name: "Skill",
+      selector: (row) => row.skill,
+      maxWidth: "auto",
+      wrap: true,
+      style: {
+        fontSize: "15px",
+      },
+    },
+    {
+      name: "Employee Count",
+      selector: (row) => row.employees,
+      width: "auto",
+      wrap: true,
+      right: "right",
+      style: {
+        fontSize: "15px",
+      },
+    },
+  ];
+  return (
+    <div className="common-container p-3">
+      <div className="activity-metrics-card">
+        <h2 className="t-25b flex-start gap-2">Skills In Development</h2>
+        <div className="transparent-table">
+          <DataTable
+            columns={columns}
+            data={data.skills_in_development}
+            defaultSortField="name"
+            pagination
+            paginationPerPage={5}
+            paginationRowsPerPageOptions={[5, 10, 20, 30, 40, 50]}
+            highlightOnHover
+            pointerOnHover
+            theme="solarized"
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SkillsDevelopment;

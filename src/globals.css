@@ -23,8 +23,8 @@
     @apply text-[30px] font-bold leading-[140%] tracking-tighter;
   }
 
-  .t-30sb {
-    @apply text-[30px] font-semibold leading-[140%]  tracking-tighter;
+  .t-30m {
+    @apply text-[30px] font-medium leading-[140%]  tracking-tighter;
   }
 
   .t-25b {
@@ -128,5 +128,8 @@
   .bNvKBt,
   .eqliEg:hover {
     background-color: transparent !important;
+  }
+  .transparent-table .rdt_TableHeadRow {
+    font-size: 20px; /* Adjust the font size as needed */
   }
 }

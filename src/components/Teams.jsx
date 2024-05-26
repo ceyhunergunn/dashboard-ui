@@ -2,7 +2,7 @@ import React from "react";
 import { MainContext } from "../context/Context";
 import DataTable from "react-data-table-component";
 
-const TeamPerformance = () => {
+const Teams = () => {
   const { data } = React.useContext(MainContext);
   const columns = [
     {
@@ -10,6 +10,9 @@ const TeamPerformance = () => {
       selector: (row) => row.title,
       maxWidth: "auto",
       wrap: true,
+      style: {
+        fontSize: "15px",
+      },
     },
     {
       name: "Employee Count",
@@ -17,6 +20,9 @@ const TeamPerformance = () => {
       width: "auto",
       wrap: true,
       center: "center",
+      style: {
+        fontSize: "15px",
+      },
     },
     {
       name: "Overall Score",
@@ -24,6 +30,9 @@ const TeamPerformance = () => {
       width: "auto",
       wrap: true,
       center: "center",
+      style: {
+        fontSize: "15px",
+      },
     },
   ];
   return (
@@ -32,7 +41,6 @@ const TeamPerformance = () => {
         <h2 className="t-25b flex-start gap-2">Teams</h2>
         <div className="transparent-table">
           <DataTable
-            title=""
             columns={columns}
             data={data.teams}
             defaultSortField="name"
@@ -47,10 +55,10 @@ const TeamPerformance = () => {
               <>
                 <div className="p-3">
                   <div className="team-details-grid">
-                    <div className="flex-start mb-2 text-[14px]">Employees</div>
-                    <div className=" text-secondary-2 text-[14px]">
+                    <div className="flex-start mb-2 t-15b">Employees</div>
+                    <div className=" text-secondary-2 t-15m">
                       {row.data.employees.map((employee) => (
-                        <div className="text-[14px]" key={employee.email}>
+                        <div className="t-15m" key={employee.email}>
                           {employee.name}
                         </div>
                       ))}
@@ -59,10 +67,8 @@ const TeamPerformance = () => {
                 </div>
                 <div className="p-3">
                   <div className="team-details-grid">
-                    <div className="flex-start mb-2 text-[14px]">
-                      Description
-                    </div>
-                    <div className="flex-end text-secondary-2 text-[14px]">
+                    <div className="flex-start mb-2 t-15b">Description</div>
+                    <div className="flex-start text-secondary-2 t-15m">
                       {row.data.description}
                     </div>
                   </div>
@@ -80,4 +86,4 @@ const TeamPerformance = () => {
   );
 };
 
-export default TeamPerformance;
+export default Teams;
