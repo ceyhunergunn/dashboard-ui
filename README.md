@@ -13,5 +13,4 @@ runs the project
 # Code and Live Demo
 
 Github Repository URL: https://github.com/ceyhunergunn/dashboard-ui
-
 Live Demo: https://dashboard-ui.hicci.com.tr/
