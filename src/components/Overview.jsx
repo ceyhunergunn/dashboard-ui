@@ -1,11 +1,16 @@
 import React from "react";
 import { MainContext } from "../context/Context";
+import { motion } from "framer-motion";
 
 const Overview = () => {
   const { data } = React.useContext(MainContext);
 
   return (
-    <div className="common-container">
+    <motion.div
+      className="common-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <div className="overview-grid">
         <div className="p-3">
           <div className="overview-card ">
@@ -62,7 +67,7 @@ const Overview = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

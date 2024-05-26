@@ -1,12 +1,17 @@
 import React from "react";
 import { MainContext } from "../context/Context";
+import { motion } from "framer-motion";
 
 const TopSkills = () => {
   const { data } = React.useContext(MainContext);
 
   return (
     <div className="common-container p-3 col-span-2 md:col-span-1">
-      <div className="main-card">
+      <motion.div
+        initial={{ x: -500 }}
+        animate={{ x: 0 }}
+        className="main-card"
+      >
         <h2 className="t-25b flex-start mb-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +35,7 @@ const TopSkills = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

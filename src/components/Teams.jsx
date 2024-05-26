@@ -1,5 +1,6 @@
 import React from "react";
 import { MainContext } from "../context/Context";
+import { motion } from "framer-motion";
 import DataTable from "react-data-table-component";
 
 const Teams = () => {
@@ -41,7 +42,11 @@ const Teams = () => {
   ];
   return (
     <div className="common-container p-3">
-      <div className="main-card">
+      <motion.div
+        initial={{ x: -500 }}
+        animate={{ x: 0 }}
+        className="main-card"
+      >
         <h2 className="t-25b flex-start mb-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +112,7 @@ const Teams = () => {
             }}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

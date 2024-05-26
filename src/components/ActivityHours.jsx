@@ -1,6 +1,7 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 import { MainContext } from "../context/Context";
+import { motion } from "framer-motion";
 
 const ActivityHours = () => {
   const { data } = React.useContext(MainContext);
@@ -140,7 +141,11 @@ const ActivityHours = () => {
 
   return (
     <div className="common-container p-3">
-      <div className="main-card">
+      <motion.div
+        initial={{ x: +500 }}
+        animate={{ x: 0 }}
+        className="main-card"
+      >
         <h2 className="t-25b flex-start mb-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +167,7 @@ const ActivityHours = () => {
             height={350}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

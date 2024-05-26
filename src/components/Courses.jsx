@@ -1,6 +1,7 @@
 import React from "react";
 import { MainContext } from "../context/Context";
 import DataTable from "react-data-table-component";
+import { motion } from "framer-motion";
 
 const Courses = () => {
   const { data, isSmallScreen, isMediumScreen } = React.useContext(MainContext);
@@ -74,7 +75,11 @@ const Courses = () => {
   ];
   return (
     <div className="common-container p-3">
-      <div className="main-card">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="main-card"
+      >
         <h2 className="t-25b flex-start mb-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +153,7 @@ const Courses = () => {
             }}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
