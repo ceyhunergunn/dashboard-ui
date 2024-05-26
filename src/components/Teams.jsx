@@ -43,7 +43,7 @@ const Teams = () => {
     <div className="common-container p-3">
       <div className="main-card">
         <h2 className="t-25b flex-start mb-5">Teams</h2>
-        <div className="transparent-table">
+        <div className="transparent-table py-8">
           <DataTable
             columns={columns}
             data={data.teams}

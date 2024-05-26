@@ -19,14 +19,16 @@ function App() {
   ) : (
     <div className="min-h-screen">
       <Overview />
-      <div className="main-grid-1">
+      <div className="main-grid-2">
         <Teams />
         <ActivityHours />
-        <Courses />
       </div>
-      <div className="main-grid-2">
+      <div className="main-grid-1">
         <Performance />
         <SkillsDevelopment />
+      </div>
+      <div className="">
+        <Courses />
       </div>
     </div>
   );
