@@ -11,6 +11,9 @@ import SkillsDevelopment from "./components/SkillsDevelopment";
 import Loader from "./components/Loader";
 import TopEmployees from "./components/TopEmployees";
 import TopSkills from "./components/TopSkills";
+import Navbar from "./components/Navbar";
+import MenuBtn from "./components/MenuBtn";
+import Menu from "./components/Menu";
 
 function App() {
   const { loader } = React.useContext(MainContext);
@@ -18,21 +21,26 @@ function App() {
   return loader ? (
     <Loader />
   ) : (
-    <div className="min-h-screen">
-      <Overview />
-      <div className="main-grid-2">
-        <Teams />
-        <ActivityHours />
+    <>
+      <Navbar />
+      <div className="min-h-screen pt-[70px] pb-5">
+        <Overview />
+        <div className="main-grid-2">
+          <Teams />
+          <ActivityHours />
+        </div>
+        <div className="main-grid-1">
+          <TopEmployees />
+          <TopSkills />
+          <SkillsDevelopment />
+        </div>
+        <div className="">
+          <Courses />
+        </div>
       </div>
-      <div className="main-grid-1">
-        <TopEmployees />
-        <TopSkills />
-        <SkillsDevelopment />
-      </div>
-      <div className="">
-        <Courses />
-      </div>
-    </div>
+      <Menu />
+      <MenuBtn />
+    </>
   );
 }
 

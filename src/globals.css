@@ -93,6 +93,35 @@
     background: #7878a3;
   }
 
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px) !important;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 70px;
+  }
+  .menu-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border: none;
+  }
+  .menu {
+    position: fixed;
+    bottom: 80px;
+    right: 0;
+    width: 210px;
+    height: fit-content;
+  }
+
   .common-container {
     @apply w-full;
   }

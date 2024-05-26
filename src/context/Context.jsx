@@ -6,6 +6,7 @@ export const MainContext = createContext();
 const MainContextProvider = (props) => {
   const [data, setData] = useState("");
   const [loader, setLoader] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 599);
   const [isMediumScreen, setIsMediumScreen] = useState(
     window.innerWidth <= 959
@@ -62,7 +63,7 @@ const MainContextProvider = (props) => {
 
   return (
     <MainContext.Provider
-      value={{ data, loader, isSmallScreen, isMediumScreen }}
+      value={{ data, loader, isSmallScreen, isMediumScreen, isOpen, setOpen }}
     >
       {props.children}
     </MainContext.Provider>
