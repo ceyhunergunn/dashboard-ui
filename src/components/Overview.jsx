@@ -19,7 +19,7 @@ const Overview = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="45px"
                 viewBox="0 -960 960 960"
-                width="70px"
+                width="60px"
                 fill="#448997"
                 className="me-2"
               >
@@ -37,7 +37,7 @@ const Overview = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="45px"
                 viewBox="0 -960 960 960"
-                width="45px"
+                width="60px"
                 fill="#448997"
                 className="me-2"
               >
@@ -55,7 +55,7 @@ const Overview = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 height="45px"
                 viewBox="0 -960 960 960"
-                width="70px"
+                width="60px"
                 fill="#448997"
                 className="me-2"
               >
