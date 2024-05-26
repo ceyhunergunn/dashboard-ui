@@ -131,8 +131,8 @@ const Courses = () => {
               </>
             )}
             paginationComponentOptions={{
-              rowsPerPageText: "rows",
-              rangeSeparatorText: "/",
+              rowsPerPageText: "",
+              rangeSeparatorText: "of",
             }}
           />
         </div>

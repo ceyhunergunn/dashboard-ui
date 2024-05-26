@@ -41,6 +41,10 @@ const SkillsDevelopment = () => {
             highlightOnHover
             pointerOnHover
             theme="solarized"
+            paginationComponentOptions={{
+              rowsPerPageText: "",
+              rangeSeparatorText: "of",
+            }}
           />
         </div>
       </div>
